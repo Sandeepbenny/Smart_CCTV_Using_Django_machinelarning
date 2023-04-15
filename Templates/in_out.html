@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visitor Detection</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        form {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        input[type="submit"] {
+            background-color: #4FD1C5;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #00FFCB;
+            transform: translateY(-3px);
+            box-shadow: 2px 5px 10px rgba(0,0,0,0.3);
+        }
+		button {
+			padding: 10px 20px;
+			font-size: 18px;
+			background-color: #ddd;
+			color: #333;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+		}
+		button:hover {
+            background-color: #bbb;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <h1>Visitor Detection</h1>
+	<form method="POST">
+	    {% csrf_token %}
+		<input type="submit" value="Start">
+	</form>
+	<div style="text-align:center; margin-top: 30px;">
+	  <button onclick="window.history.back()">Main Page</button>
+	</div>
+</html>
+
+{% comment %} <!DOCTYPE html>
+<html>
+<head>
+	<title>Smart CCTV</title>
+</head>
+<body>
+    <h1>Motion Detection</h1>
+	<form method="POST">
+		{% csrf_token %}
+		<input type="submit" value="Start">
+	</form>
+    <button onclick="window.history.back()">Do you want to go back?</button>
+</body>
+</html> {% endcomment %}

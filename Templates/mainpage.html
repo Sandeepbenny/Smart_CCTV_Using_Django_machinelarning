@@ -1,0 +1,303 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+   </head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  min-height: 100vh;
+  /*display: flex;*/
+  align-items: center;
+  justify-content: center;
+  background: #131314;
+  overflow: hidden;
+}
+/*::selection{
+  color: #000;
+  background: #fff;}
+nav{
+  position: fixed;
+  background: #1b1b1b;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 12;
+}
+nav .menu{
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}*/
+.menu .logo a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  font-weight: 600;
+}
+.menu ul{
+  display: inline-flex;
+}
+.menu ul li{
+  list-style: none;
+  margin-left: 7px;
+}
+.menu ul li:first-child{
+  margin-left: 0px;
+}
+.menu ul li a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.menu ul li a:hover{
+  background: rgb(23, 21, 21);
+  color: rgb(186, 32, 32);
+}
+.img{
+  background: url('img3.png')no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.img::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.center{
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+.center .title{
+  color: #fff;
+  font-size: 55px;
+  font-weight: 600;
+}
+.center .sub_title{
+  color: rgb(44, 120, 8);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+}
+.center .btns{
+  margin-top: 20px;
+}
+.center .btns button{
+  height: 55px;
+  width: 170px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+  border: 2px solid rgb(216, 55, 55);
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+/*.center .btns button:first-child{
+  color: rgb(244, 236, 236);
+  background: none;}*/
+.btns button:first-child:hover{
+  background: rgb(235, 229, 229);
+  color: black;
+}
+.center .btns button:last-child{
+  background: rgb(199, 81, 81);
+  color: black;
+}
+.center .btns button:hover{
+  background: rgb(203, 196, 196);
+  color: black;
+}
+.Footer .li{
+    background-color: #4070F4;
+    color:aqua;
+    text-align: center;
+  }
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 500px;
+    overflow: hidden;
+}
+.container .text{
+    position: relative;
+    color: #4070F4;
+    font-size: 30px;
+    font-weight: 600;
+}
+.container .text.first-text{
+    color: #FFF;
+}
+.text.sec-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #010718;
+    border-left: 2px solid #4070F4;
+    animation: animate 4s steps(12) infinite;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+
+}
+</style>
+<body>
+
+  <div class="img"></div>
+  <div class="center">
+    <div class="title">SMART SURVELLIENCE SYSTEM</div>
+    <div class="sub_title"><br>PRIVACY THROUGH WEBCAM</div><br>
+  <div class="container">
+    <div class="center">
+      <br> <br> <br> <br> <span class="text first-text">CCTV SYSTEM</span>
+      <span class="text sec-text"></span>
+    </div>
+    </div>
+    <form action='features/' method="POST">
+      {% csrf_token %}  
+      <br> <br>
+      <button class="glow-on-hover"
+       <button onclick="location.href='features.html'">
+        <type="button">START THE PROJECT BY CLICKING HERE!</button>
+    </div>
+    </form>
+  </div>
+  <script>
+    const text = document.querySelector(".sec-text");
+
+    const textLoad = () => {
+        setTimeout(() => {
+            text.textContent = " 80% Accuracy ";
+        }, 0);
+        setTimeout(() => {
+            text.textContent = " Efficent Model ";
+        }, 4000);
+        setTimeout(() => {
+            text.textContent = " Genuine Result ";
+        }, 8000); //1s = 1000 milliseconds
+    }
+
+    textLoad();
+    setInterval(textLoad, 12000);
+</script>    
+  <footer class="Footer">
+    <li style="color:aqua;"></ul>
+    <p style="color: aqua;"></p>
+  </footer>
+</html>
+
